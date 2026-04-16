@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx skills:*)",
+      "WebFetch(domain:www.wolverine.com)",
+      "WebFetch(domain:www.cougarpaws.com)",
+      "Bash(cp -r /tmp/taste-skill/skills/* .claude/skills/)",
+      "Bash(mkdir -p .claude/skills)",
+      "Bash(npx shadcn@latest init --yes --template next --base-color stone)",
+      "Bash(npx shadcn@latest init --template next --base-color stone)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(mv andaso-store/* .)",
+      "Bash(mv andaso-store/.* .)",
+      "Bash(rmdir andaso-store:*)",
+      "Bash(npx shadcn@latest:*)"
+    ]
+  }
+}
