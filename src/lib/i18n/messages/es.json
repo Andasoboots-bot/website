@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "ANDASO | Botas de Trabajo Premium",
+    "description": "Botas de seguridad de grado profesional diseñadas para máxima tracción. Distribuidor autorizado de Cougar Paws y accesorios."
+  },
+  "navigation": {
+    "shop": "Tienda",
+    "collections": "Colecciones",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "search": "Buscar",
+    "cart": "Carrito",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "categories": {
+      "roofingBoots": "Botas para Techos",
+      "replacementPads": "Pads de Repuesto",
+      "covers": "Cubiertas y Accesorios",
+      "mountainClaws": "Mountain Claws"
+    }
+  },
+  "hero": {
+    "badge": "Desde 2024",
+    "title": "Construidas para las Alturas",
+    "subtitle": "Botas de seguridad de grado profesional diseñadas para máxima tracción en techos de asfalto y metal. Confiables por techistas desde 1996.",
+    "ctaPrimary": "Ver Colección",
+    "ctaSecondary": "Saber Más"
+  },
+  "featured": {
+    "title": "Productos Destacados",
+    "viewAll": "Ver Todo",
+    "bestsellers": "Más Vendidos",
+    "newArrivals": "Nuevos Lanzamientos"
+  },
+  "product": {
+    "addToCart": "Agregar al Carrito",
+    "selectSize": "Seleccionar Talla",
+    "selectColor": "Seleccionar Color",
+    "inStock": "En Stock",
+    "outOfStock": "Agotado",
+    "description": "Descripción",
+    "features": "Características",
+    "specifications": "Especificaciones",
+    "relatedProducts": "También te puede gustar",
+    "bestseller": "Más Vendido",
+    "new": "Nuevo",
+    "sale": "Oferta",
+    "quantity": "Cantidad",
+    "sizeGuide": "Guía de Tallas"
+  },
+  "cart": {
+    "title": "Tu Carrito",
+    "empty": "Tu carrito está vacío",
+    "continueShopping": "Seguir Comprando",
+    "subtotal": "Subtotal",
+    "shipping": "Envío",
+    "total": "Total",
+    "checkout": "Pagar",
+    "remove": "Eliminar",
+    "update": "Actualizar"
+  },
+  "footer": {
+    "tagline": "Botas de seguridad profesionales para quienes trabajan en las alturas.",
+    "shop": "Tienda",
+    "company": "Empresa",
+    "support": "Soporte",
+    "social": "Síguenos",
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con cuidado para profesionales"
+  }
+}

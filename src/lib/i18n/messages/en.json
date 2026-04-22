@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "ANDASO | Premium Work Boots",
+    "description": "Professional-grade safety boots engineered for maximum traction. Authorized retailer of Cougar Paws roofing boots and accessories."
+  },
+  "navigation": {
+    "shop": "Shop",
+    "collections": "Collections",
+    "about": "About",
+    "contact": "Contact",
+    "search": "Search",
+    "cart": "Cart",
+    "menu": "Menu",
+    "close": "Close",
+    "categories": {
+      "roofingBoots": "Roofing Boots",
+      "replacementPads": "Replacement Pads",
+      "covers": "Covers & Accessories",
+      "mountainClaws": "Mountain Claws"
+    }
+  },
+  "hero": {
+    "badge": "Est. 2024",
+    "title": "Built for the Heights",
+    "subtitle": "Professional-grade safety boots engineered for maximum traction on shingle and metal roof surfaces. Trusted by roofers since 1996.",
+    "ctaPrimary": "Shop Collection",
+    "ctaSecondary": "Learn More"
+  },
+  "featured": {
+    "title": "Featured Products",
+    "viewAll": "View All",
+    "bestsellers": "Bestsellers",
+    "newArrivals": "New Arrivals"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "selectSize": "Select Size",
+    "selectColor": "Select Color",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "description": "Description",
+    "features": "Features",
+    "specifications": "Specifications",
+    "relatedProducts": "You May Also Like",
+    "bestseller": "Bestseller",
+    "new": "New",
+    "sale": "Sale",
+    "quantity": "Quantity",
+    "sizeGuide": "Size Guide"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "update": "Update"
+  },
+  "footer": {
+    "tagline": "Professional safety boots for those who work at heights.",
+    "shop": "Shop",
+    "company": "Company",
+    "support": "Support",
+    "social": "Follow Us",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with care for professionals"
+  }
+}

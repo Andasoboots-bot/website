@@ -12,7 +12,12 @@
       "Bash(mv andaso-store/* .)",
       "Bash(mv andaso-store/.* .)",
       "Bash(rmdir andaso-store:*)",
-      "Bash(npx shadcn@latest:*)"
+      "Bash(npx shadcn@latest:*)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:imgur.com)",
+      "WebFetch(domain:ibb.co)",
+      "Bash(npm run:*)",
+      "Bash(grep -E '\\\\.\\(png|jpg|jpeg|webp|gif|avif\\)$')"
     ]
   }
 }
