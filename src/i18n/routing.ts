@@ -41,7 +41,15 @@ export const routing = defineRouting({
     '/checkout': {
       en: '/checkout',
       es: '/pago'
-    }
+    },
+    '/privacy': '/privacy',
+    '/terms': '/terms',
+    '/careers': '/careers',
+    '/press': '/press',
+    '/faq': '/faq',
+    '/shipping': '/shipping',
+    '/size-guide': '/size-guide',
+    '/warranty': '/warranty'
   }
 });
 

@@ -1,25 +1,28 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { List, ShoppingBag, MagnifyingGlass } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useCart } from "@/lib/cart/store";
 import { CartDrawer } from "@/components/cart/CartDrawer";
-
-const navigation = [
-  { name: "Shop", href: "/shop" },
-  { name: "Collections", href: "/collections" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const t = useTranslations("navigation");
   const { getTotalItems, openCart } = useCart();
   const cartCount = getTotalItems();
+
+  const navigation = [
+    { name: t("shop"), href: "/shop" },
+    { name: t("collections"), href: "/collections" },
+    { name: t("about"), href: "/about" },
+    { name: t("contact"), href: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +57,7 @@ export function Header() {
             {navigation.map((item) => (
               <Link
                 key={item.name}
-                href={item.href}
+                href={item.href as any}
                 className="text-sm font-medium text-[#1a1a1a] hover:text-[#a41e21] transition-colors duration-300 relative group"
               >
                 {item.name}
@@ -68,15 +71,21 @@ export function Header() {
             {/* Search */}
             <button
               className="hidden md:flex p-2 hover:bg-black/5 rounded-full transition-colors"
-              aria-label="Search"
+              aria-label={t("search")}
             >
               <MagnifyingGlass className="w-5 h-5 text-[#1a1a1a]" />
             </button>
+
+            {/* Language Switcher */}
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
 
             {/* Cart */}
             <button
               onClick={openCart}
               className="relative p-2 hover:bg-black/5 rounded-full transition-colors"
+              aria-label={t("cart")}
             >
               <ShoppingBag className="w-5 h-5 text-[#1a1a1a]" />
               {cartCount > 0 && (
@@ -104,6 +113,7 @@ export function Header() {
                     <span className="text-xl font-bold tracking-tight">
                       ANDASO
                     </span>
+                    <LanguageSwitcher />
                   </div>
                   <nav className="flex-1 p-6">
                     <ul className="space-y-1">
@@ -119,7 +129,7 @@ export function Header() {
                           }}
                         >
                           <Link
-                            href={item.href}
+                            href={item.href as any}
                             className="block py-4 text-2xl font-medium text-[#1a1a1a] hover:text-[#a41e21] transition-colors border-b border-black/5"
                           >
                             {item.name}

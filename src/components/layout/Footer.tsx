@@ -1,35 +1,40 @@
-import Link from "next/link";
+"use client";
+
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { Separator } from "@/components/ui/separator";
 
-const footerLinks = {
-  shop: [
-    { name: "All Products", href: "/shop" },
-    { name: "Roofing Boots", href: "/shop/roofing-boots" },
-    { name: "Replacement Pads", href: "/shop/replacement-pads" },
-    { name: "Covers & Accessories", href: "/shop/covers-accessories" },
-    { name: "Mountain Claws", href: "/shop/mountain-claws" },
-  ],
-  company: [
-    { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "Careers", href: "/careers" },
-    { name: "Press", href: "/press" },
-  ],
-  support: [
-    { name: "FAQ", href: "/faq" },
-    { name: "Shipping & Returns", href: "/shipping" },
-    { name: "Size Guide", href: "/size-guide" },
-    { name: "Warranty", href: "/warranty" },
-  ],
-  social: [
-    { name: "Instagram", href: "#" },
-    { name: "Facebook", href: "#" },
-    { name: "YouTube", href: "#" },
-    { name: "LinkedIn", href: "#" },
-  ],
-};
-
 export function Footer() {
+  const t = useTranslations("footer");
+  const navT = useTranslations("navigation");
+
+  const footerLinks = {
+    shop: [
+      { name: navT("categories.roofingBoots"), href: "/shop/roofing-boots" },
+      { name: navT("categories.replacementPads"), href: "/shop/replacement-pads" },
+      { name: navT("categories.covers"), href: "/shop/covers-accessories" },
+      { name: navT("categories.mountainClaws"), href: "/shop/mountain-claws" },
+    ],
+    company: [
+      { name: t("company.about") || "About Us", href: "/about" },
+      { name: t("company.contact") || "Contact", href: "/contact" },
+      { name: "Careers", href: "/careers" },
+      { name: "Press", href: "/press" },
+    ],
+    support: [
+      { name: "FAQ", href: "/faq" },
+      { name: "Shipping & Returns", href: "/shipping" },
+      { name: "Size Guide", href: "/size-guide" },
+      { name: "Warranty", href: "/warranty" },
+    ],
+    social: [
+      { name: "Instagram", href: "#" },
+      { name: "Facebook", href: "#" },
+      { name: "YouTube", href: "#" },
+      { name: "LinkedIn", href: "#" },
+    ],
+  };
+
   return (
     <footer className="bg-[#1a1a1a] text-white">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -42,8 +47,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 max-w-sm leading-relaxed">
-              Professional safety boots for those who work at heights. Authorized
-              retailer of Cougar Paws since 2024.
+              {t("tagline")}
             </p>
             <div className="flex gap-4">
               {footerLinks.social.map((link) => (
@@ -63,13 +67,13 @@ export function Footer() {
             {/* Shop */}
             <div className="space-y-4">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-                Shop
+                {t("shop")}
               </h3>
               <ul className="space-y-3">
                 {footerLinks.shop.map((link) => (
                   <li key={link.name}>
                     <Link
-                      href={link.href}
+                      href={link.href as any}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
@@ -82,13 +86,13 @@ export function Footer() {
             {/* Company */}
             <div className="space-y-4">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-                Company
+                {t("company")}
               </h3>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
                     <Link
-                      href={link.href}
+                      href={link.href as any}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
@@ -101,13 +105,13 @@ export function Footer() {
             {/* Support */}
             <div className="space-y-4">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-                Support
+                {t("support")}
               </h3>
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.name}>
                     <Link
-                      href={link.href}
+                      href={link.href as any}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
@@ -123,7 +127,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
-            © 2024 ANDASO. All rights reserved.
+            © 2024 ANDASO. {t("rights")}
           </p>
           <div className="flex gap-6">
             <Link
